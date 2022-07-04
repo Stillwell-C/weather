@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;;
+}
+
+.body-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.modal-container {
+    position: absolute;
+    min-height: 400px;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 1rem;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > label {
+    font-size: 2rem;
+    color: white;
+}
+
+.input-div {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+.input-div > input {
+    width: 220px;
+    padding: 5px 8px;
+    border-radius:  .25rem;
+    border: 1px solid #333;
+    outline: none;
+}
+
+.input-div > button {
+    position: absolute;
+    right: 1px;
+    padding: 3px 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: -5px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button > img {
+    margin-left: -7px;
+    vertical-align: center;
+    width: 15px
+}
+
+select {
+    padding: 3px 5px;
+    width: 85px;
+    border-radius:  .25rem;
+    border: 1px solid #333;
+    outline: none;
+    cursor: pointer;
+}
+
+.error-div {
+    height: 20px;
+    color: red;
+}
+
+.error-message {
+    display: none;
+}
+
+.error-message.active {
+    display: block;
+}
+
+.input.hidden {
+    display: none;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    width: 600px;
+}
+
+.weather-info > h4 {
+    font-size: 1.4rem;
+}
+
+.middle-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.right-middle {
+    display: flex;
+}
+
+.weather-icon-div > img {
+    width: 80px;
+}
+
+.left-middle,
+.weather-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-middle,
+.right-middle {
+    width: 220px
+}
+
+.middle-display h1 {
+    width: 180px;
+    font-size: 3rem;
+}
+
+.middle-display h5 {
+    width: 180px;
+    font-size: 1rem;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.bottom-display,
+.air-pollution-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 80px;
+}
+
+.bottom-display > div,
+.air-pollution-display > div {
+    max-width: 110px;
+}
+
+.air-pollution-display .bottom-content {
+    padding-left: 5px;
+    border-radius: .5rem;
+}
+
+.bottom-display.hidden {
+    display: none;
+}
+
+.air-pollution-display.hidden {
+    display: none;
+}
+
+.bottom-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bottom-content {
+    font-size: 1.2rem;
+}
+
+.buttons-div button {
+    padding: 5px 10px;
+    border-radius: .25rem;
+    outline: none;
+    border: 1px solid #333;
+    cursor: pointer;
+    background-color: #fafafa;
+    font-weight: bold;
+}
+
+.info-toggle {
+    width: 106px;
+}
+
+.buttons-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttons-div button:hover {
+    background-color: #cfcfcf;
+}
+
+.aqi-info-div {
+    margin-top: -35px;
+    margin-bottom: -25px;
+    width: 100%;
+    height: 19px;
+    text-align: right;
+}
+
+.aqi-info {
+    display: block;
+    color: #fafafa;
+}
+
+.aqi-info:hover {
+    color: #cfcfcf
+}
+
+.aqi-info.hidden {
+    display: none;
+}
+
+.weather-info.hidden {
+    display: none;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.modal-container.rain {
+    background-image: url(/images/rain.jpg);
+    color: white;
+}
+
+.modal-container.snow {
+    background-image: url(/images/snow.avif);
+    color: white
+}
+
+.modal-container.fog {
+    background-image: url(/images/fog.jpg);
+    color: black
+}
+
+.modal-container.sunset {
+    background-image: url(/images/sunset.jpg);
+    color: white
+}
+
+.modal-container.sun {
+    background-image: url(/images/sun.jpg);
+    color: white
+}
+
+.modal-container.night {
+    background-image: url(/images/night.jpg);
+    color: white
+}
+
+.modal-container.p-cloud {
+    background-image: url(/images/partial-cloud.jpg);
+    color: black
+}
+
+.modal-container.cloud {
+    background-image: url(/images/cloud.jpg);
+    color: white
+}
+
+.modal-container.overcast {
+    background-image: url(/images/overcast.jpg);
+    color: white
+}
+
+.modal-container.lightning {
+    background-image: url(/images/lightning.jpg);
+    color: white
+}
+
+.modal-container.nk-sunset {
+    background-image: url(/images/kim-jong-un-horse.webp);
+    color: white;
+}
+
+.modal-container.nk-sun {
+    background-image: url(/images/kis-sun-alt.jpg);
+    color: black;
+}
+
+.modal-container.nk-night {
+    background-image: url(/images/nk-night.webp);
+    color: white;
+}
+
+.modal-container.nk-clear {
+    background-image: url(/images/kis-clear.jpg);
+    color: black;
+}
+
+.modal-container.nk-clouds {
+    background-image: url(/images/kji-clouds.jpg);
+    background-position: bottom;
+    color: white;
+}
+
+.modal-container.nk-wind {
+    background-image: url(/images/kju-windy.webp);
+    color: white;
+}
+
+.modal-container.nk-rain {
+    background-image: url(/images/nk-rain.jpeg);
+    color: white;
+}
+
+.modal-container.nk-snow {
+    background-image: url(/images/kju-horse-snow.jpg);
+    color: white;
+}
+
+.modal-container.nk-fog {
+    background-image: url(/images/nk-fog.jpg);
+    background-position: top;
+    color: white;
+}
+
+.modal-container.nk-overcast {
+    background-image: url(/images/nk-overcast.webp);
+    color: white;
+}
+
+/* Remove? */
+.modal-container.nk-typhoon {
+    background-image: url(/images/kju-typhoon.jpg);
+    color: black
+}

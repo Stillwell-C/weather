@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="body-container">
+        <div class="modal-container">
+            <div class="input">
+                <form action="GET" novalidate>
+                    <label for="city-input">Local Weather</label>
+                    <div>
+                        <div class="input-div">
+                            <input type="text" name="city-input" id="city-input" placeholder="Search a city...">
+                            <button id="city-input-btn"><img src="/images/search-svgrepo-com .svg" alt="search button image"></button>
+                        </div>
+                        <select name="language" id="language">
+                            <option value="en">English</option>
+                            <option value="kr">조선어</option>
+                            <option value="ja">日本語</option>
+                            <option value="zh_cn">中文</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="error-div">
+                    <div id="error-message" class="error-message">Error. Please try again.   
+                    </div>
+                </div>
+            </div>
+            <div class="weather-info hidden">
+                <h4 id="date"></h4>
+                <div class="middle-display">
+                    <div class="left-middle">
+                        <h1 id="temperature"></h1>
+                        <h5 id="city"></h5>
+                    </div>
+                    <div class="right-middle">
+                        <div class="weather-icon-div">
+                            <img alt="Icon displaying current weather" id="weather-icon">
+                        </div>
+                        <div class="weather-display">
+                            <h1 id="weather"></h1>
+                            <h5 id="weather-description"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-display">
+                    <div class="feels-div">
+                        <p class="bottom-title">Feels like</p>
+                        <p class="bottom-content" id="feels-like"></p>
+                    </div>
+                    <div class="low-div">
+                        <p class="bottom-title">Low</p>
+                        <p class="bottom-content" id="low-temp"></p>
+                    </div>
+                    <div class="high-div">
+                        <p class="bottom-title">High</p>
+                        <p class="bottom-content" id="high-temp"></p>
+                    </div>
+                    <div class="humidity-div">
+                        <p class="bottom-title">Humidity</p>
+                        <p class="bottom-content" id="humidity"></p>
+                    </div>
+                    <div class="pressure-div">
+                        <p class="bottom-title">Pressure</p>
+                        <p class="bottom-content" id="pressure"></p>
+                    </div>
+                </div>
+                <div class="air-pollution-display hidden">
+                    <div class="pm25-div">
+                        <p class="bottom-title">PM 2.5</p>
+                        <p class="bottom-content" id="pm25"></p>
+                    </div>
+                    <div class="pm10-div">
+                        <p class="bottom-title">PM 10</p>
+                        <p class="bottom-content" id="pm10"></p>
+                    </div>
+                    <div class="ozone-div">
+                        <p class="bottom-title">Ozone</p>
+                        <p class="bottom-content" id="ozone"></p>
+                    </div>
+                    <div class="no2-div">
+                        <p class="bottom-title">Nitrogen Dioxide</p>
+                        <p class="bottom-content" id="no2"></p>
+                    </div>
+                    <div class="co-div">
+                        <p class="bottom-title">Carbon monoxide</p>
+                        <p class="bottom-content" id="co"></p>
+                    </div>
+                </div>
+                <div class="buttons-div">
+                    <button id="convert-button" class="farenheit">°F</button>
+                    <button id="info-toggle" class="info-toggle">AQI Info</button>
+                    <button id="back-button">Back</button>
+                </div>
+                <div class="aqi-info-div">
+                    <a class="aqi-info hidden" href="https://en.wikipedia.org/wiki/Air_quality_index#CAQI">More AQI information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
